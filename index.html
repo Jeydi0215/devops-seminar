@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweet Scoop Ice Cream</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff5f7;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ff4d6d;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .flavors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #ff4d6d;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ff4d6d;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Sweet Scoop 🍦</h1>
+    <p>The happiest place for ice cream lovers</p>
+    <a href="#flavors" class="btn">Explore Flavors</a>
+  </header>
+
+  <nav>
+    <a href="#flavors">Flavors</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="flavors">
+    <h2>Our Best Flavors</h2>
+    <div class="flavors">
+      <div class="card">
+        <h3>Vanilla Dream</h3>
+        <p>Creamy classic vanilla made with real beans.</p>
+      </div>
+      <div class="card">
+        <h3>Chocolate Bliss</h3>
+        <p>Rich, smooth chocolate for true chocoholics.</p>
+      </div>
+      <div class="card">
+        <h3>Strawberry Swirl</h3>
+        <p>Fresh strawberries blended into creamy goodness.</p>
+      </div>
+      <div class="card">
+        <h3>Mint Chip</h3>
+        <p>Cool mint ice cream with chocolate chips.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Sweet Scoop is your neighborhood ice cream shop serving handcrafted,
+      premium ice cream made daily with love and fresh ingredients.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: hello@sweetscoop.com</p>
+    <p>Phone: +63 900 123 4567</p>
+    <a href="#" class="btn">Order Now</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Sweet Scoop Ice Cream. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
