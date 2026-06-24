@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – Scoops & Co.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scoops & Co. – Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;1,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,7 +26,7 @@
       line-height: 1.65;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       display: flex;
       justify-content: space-between;
@@ -34,7 +34,6 @@
       padding: 1.25rem 2.5rem;
       border-bottom: 1px solid var(--sugar);
     }
-
     .logo {
       font-family: 'Fraunces', serif;
       font-size: 1.35rem;
@@ -42,13 +41,7 @@
       color: var(--raspberry);
       letter-spacing: -0.02em;
     }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
+    nav ul { list-style: none; display: flex; gap: 2rem; }
     nav a {
       text-decoration: none;
       color: var(--muted);
@@ -56,19 +49,15 @@
       font-weight: 500;
       transition: color 0.2s;
     }
+    nav a:hover, nav a[aria-current="page"] { color: var(--raspberry); }
 
-    nav a:hover, nav a[aria-current="page"] {
-      color: var(--raspberry);
-    }
-
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       text-align: center;
       padding: 5rem 2rem 4rem;
       max-width: 700px;
       margin: 0 auto;
     }
-
     .hero-eyebrow {
       font-size: 0.8rem;
       letter-spacing: 0.15em;
@@ -77,7 +66,6 @@
       font-weight: 500;
       margin-bottom: 1.25rem;
     }
-
     .hero h1 {
       font-family: 'Fraunces', serif;
       font-size: clamp(2.4rem, 6vw, 4rem);
@@ -86,20 +74,23 @@
       color: var(--ink);
       margin-bottom: 1.5rem;
     }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--raspberry);
+    .hero h1 em { font-style: italic; color: var(--raspberry); }
+    .hero p { font-size: 1.05rem; color: var(--muted); max-width: 520px; margin: 0 auto 2rem; }
+    .btn {
+      display: inline-block;
+      background: var(--raspberry);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.75rem 2rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: opacity 0.2s;
     }
+    .btn:hover { opacity: 0.88; }
 
-    .hero p {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    /* ── DIVIDER SCOOP ── */
+    /* DIVIDER */
     .scoop-divider {
       text-align: center;
       font-size: 2rem;
@@ -108,18 +99,83 @@
       opacity: 0.6;
     }
 
-    /* ── STORY ── */
-    .story {
+    /* FLAVORS */
+    .flavors-section { max-width: 980px; margin: 3rem auto; padding: 0 2.5rem; }
+    .flavors-section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+    .flavors-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .flavor-card {
+      background: var(--sugar);
+      border-radius: 3px;
+      padding: 1.75rem;
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .flavor-icon { font-size: 2.2rem; flex-shrink: 0; line-height: 1; }
+    .flavor-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      color: var(--ink);
+    }
+    .flavor-card p { font-size: 0.88rem; color: var(--muted); }
+
+    /* DARK BAND */
+    .dark-band {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 4.5rem 2.5rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .dark-band h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .dark-band p { color: rgba(253,246,236,0.65); max-width: 520px; margin: 0 auto 2rem; font-size: 1rem; }
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid rgba(253,246,236,0.4);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.75rem 2rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: border-color 0.2s, opacity 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--cream); opacity: 0.8; }
+
+    /* CONTACT */
+    .contact {
+      max-width: 980px;
+      margin: 5rem auto;
+      padding: 0 2.5rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
-      max-width: 980px;
-      margin: 3rem auto;
-      padding: 0 2.5rem;
       align-items: center;
     }
-
-    .story-visual {
+    .contact-text h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .contact-text p { color: var(--muted); margin-bottom: 0.5rem; }
+    .contact-text a { color: var(--raspberry); text-decoration: none; }
+    .contact-text a:hover { text-decoration: underline; }
+    .contact-visual {
       background: var(--sugar);
       border-radius: 3px;
       aspect-ratio: 4/3;
@@ -129,153 +185,16 @@
       font-size: 6rem;
     }
 
-    .story-text h2 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .story-text p {
-      color: var(--muted);
-      margin-bottom: 0.85rem;
-    }
-
-    .story-text p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ── VALUES ── */
-    .values {
-      background: var(--ink);
-      color: var(--cream);
-      padding: 4.5rem 2.5rem;
-      margin-top: 4rem;
-    }
-
-    .values-inner {
-      max-width: 980px;
-      margin: 0 auto;
-    }
-
-    .values h2 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.9rem;
-      font-weight: 300;
-      font-style: italic;
-      margin-bottom: 3rem;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem;
-    }
-
-    .value-item {
-      border-top: 1px solid rgba(255,255,255,0.15);
-      padding-top: 1.25rem;
-    }
-
-    .value-icon {
-      font-size: 1.6rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .value-item h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
-
-    .value-item p {
-      font-size: 0.9rem;
-      color: rgba(253,246,236,0.65);
-      line-height: 1.6;
-    }
-
-    /* ── TEAM ── */
-    .team {
-      max-width: 980px;
-      margin: 5rem auto;
-      padding: 0 2.5rem;
-    }
-
-    .team h2 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      margin-bottom: 2.5rem;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
-    .team-card {
-      text-align: center;
-    }
-
-    .team-avatar {
-      width: 100%;
-      aspect-ratio: 1;
-      background: var(--sugar);
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .team-card h3 {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .team-card .role {
-      font-size: 0.82rem;
-      color: var(--pistachio);
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.6rem;
-    }
-
-    .team-card p {
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    /* ── CTA ── */
-    .cta {
-      background: var(--raspberry);
-      color: #fff;
-      text-align: center;
-      padding: 4.5rem 2rem;
-    }
-
+    /* CTA */
+    .cta { background: var(--raspberry); color: #fff; text-align: center; padding: 4.5rem 2rem; }
     .cta h2 {
       font-family: 'Fraunces', serif;
       font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
     }
-
-    .cta p {
-      font-size: 1rem;
-      opacity: 0.85;
-      margin-bottom: 2rem;
-    }
-
-    .btn {
+    .cta p { font-size: 1rem; opacity: 0.85; margin-bottom: 2rem; }
+    .btn-white {
       display: inline-block;
       background: #fff;
       color: var(--raspberry);
@@ -287,10 +206,9 @@
       text-decoration: none;
       transition: opacity 0.2s;
     }
+    .btn-white:hover { opacity: 0.88; }
 
-    .btn:hover { opacity: 0.88; }
-
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       border-top: 1px solid var(--sugar);
       text-align: center;
@@ -299,16 +217,169 @@
       color: var(--muted);
     }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 680px) {
       nav ul { display: none; }
-      .story { grid-template-columns: 1fr; }
-      .values-grid { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: 1fr 1fr; }
+      .flavors-grid { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; }
     }
 
-    @media (max-width: 400px) {
-      .team-grid { grid-template-columns: 1fr; }
+    /* ── CHATBOT ── */
+    #chat-toggle {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      width: 56px;
+      height: 56px;
+      background: var(--raspberry);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(201,75,106,0.38);
+      z-index: 1000;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #chat-toggle:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 26px rgba(201,75,106,0.5);
+    }
+    #chat-toggle svg { width: 24px; height: 24px; fill: #fff; }
+    #chat-toggle .icon-close { display: none; }
+
+    #chat-window {
+      position: fixed;
+      bottom: 5.5rem;
+      right: 1.75rem;
+      width: 356px;
+      max-height: 510px;
+      background: var(--cream);
+      border: 1px solid var(--sugar);
+      border-radius: 4px;
+      box-shadow: 0 14px 44px rgba(30,26,23,0.15);
+      display: none;
+      flex-direction: column;
+      z-index: 999;
+      overflow: hidden;
+      transform-origin: bottom right;
+    }
+    #chat-window.open {
+      display: flex;
+      animation: chat-pop 0.18s ease-out;
+    }
+    @keyframes chat-pop {
+      from { opacity: 0; transform: scale(0.94); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .chat-header {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 0.95rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      flex-shrink: 0;
+    }
+    .chat-header-avatar { font-size: 1.5rem; line-height: 1; }
+    .chat-header-info { flex: 1; }
+    .chat-header-name {
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .chat-header-sub { font-size: 0.72rem; color: rgba(253,246,236,0.5); margin-top: 0.1rem; }
+    .chat-online-dot { width: 7px; height: 7px; background: #6fcf97; border-radius: 50%; flex-shrink: 0; }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      scroll-behavior: smooth;
+    }
+    .chat-messages::-webkit-scrollbar { width: 3px; }
+    .chat-messages::-webkit-scrollbar-thumb { background: var(--sugar); border-radius: 2px; }
+
+    .msg {
+      max-width: 84%;
+      line-height: 1.5;
+      font-size: 0.875rem;
+      padding: 0.58rem 0.85rem;
+      border-radius: 3px;
+      word-break: break-word;
+    }
+    .msg.bot { background: var(--sugar); color: var(--ink); align-self: flex-start; border-bottom-left-radius: 1px; }
+    .msg.user { background: var(--raspberry); color: #fff; align-self: flex-end; border-bottom-right-radius: 1px; }
+
+    .typing-bubble {
+      background: var(--sugar);
+      align-self: flex-start;
+      border-radius: 3px;
+      border-bottom-left-radius: 1px;
+      padding: 0.65rem 0.9rem;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+    .typing-bubble span {
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: var(--muted);
+      border-radius: 50%;
+      animation: bounce 1.1s infinite;
+    }
+    .typing-bubble span:nth-child(2) { animation-delay: 0.17s; }
+    .typing-bubble span:nth-child(3) { animation-delay: 0.34s; }
+    @keyframes bounce {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+      30% { transform: translateY(-4px); opacity: 1; }
+    }
+
+    .chat-footer {
+      padding: 0.7rem 0.9rem;
+      border-top: 1px solid var(--sugar);
+      display: flex;
+      gap: 0.5rem;
+      flex-shrink: 0;
+      background: var(--cream);
+    }
+    #chat-input {
+      flex: 1;
+      border: 1px solid var(--sugar);
+      border-radius: 2px;
+      padding: 0.52rem 0.75rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      background: #fff;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    #chat-input:focus { border-color: var(--raspberry); }
+    #chat-input::placeholder { color: var(--muted); }
+    #chat-send {
+      background: var(--raspberry);
+      color: #fff;
+      border: none;
+      border-radius: 2px;
+      padding: 0.52rem 1rem;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    #chat-send:hover { opacity: 0.88; }
+    #chat-send:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    @media (max-width: 420px) {
+      #chat-window { width: calc(100vw - 2rem); right: 1rem; }
     }
   </style>
 </head>
@@ -317,86 +388,210 @@
   <nav>
     <span class="logo">Scoops & Co.</span>
     <ul>
-      <li><a href='index.html'>Menu</a></li>
-      <li><a href="#" aria-current="page">About</a></li>
-      <li><a href='ingredients.html'>Flavors</a></li>
+      <li><a href="index.html" aria-current="page">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="ingredients.html">Flavors</a></li>
     </ul>
   </nav>
 
   <section class="hero">
-    <p class="hero-eyebrow">Our story</p>
-    <h1>Made slowly,<br /><em>eaten fast.</em></h1>
-    <p>We're a family-run scoop shop obsessed with real ingredients, bold flavors, and the kind of summer afternoon that smells like waffle cones.</p>
+    <p class="hero-eyebrow">Now serving</p>
+    <h1>The happiest place<br /><em>for ice cream.</em></h1>
+    <p>Handcrafted, slow-churned, and made daily with real ingredients. Come find your flavor on Elm Street.</p>
+    <a href="#flavors" class="btn">Explore flavors</a>
   </section>
 
   <div class="scoop-divider">🍦</div>
 
-  <section class="story">
-    <div class="story-visual">🍨</div>
-    <div class="story-text">
-      <h2>A backyard experiment that got out of hand</h2>
-      <p>It started in 2009 with a secondhand churn, a bag of Mindanao cacao, and a bet between two sisters that they could make better chocolate ice cream than anything in town.</p>
-      <p>They won the bet. Then they won a farmers' market stall. Then a shop on Elm Street, which ran out of parking on opening day.</p>
-      <p>Fifteen years later, we're still making every batch by hand — the same way, the same people, the same obsession with getting it right before we serve it to you.</p>
+  <section class="flavors-section" id="flavors">
+    <h2>Our best flavors</h2>
+    <div class="flavors-grid">
+      <div class="flavor-card">
+        <div class="flavor-icon">🍦</div>
+        <div>
+          <h3>Vanilla Dream</h3>
+          <p>Creamy classic vanilla made with real Madagascan beans. The one that started it all.</p>
+        </div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-icon">🍫</div>
+        <div>
+          <h3>Chocolate Bliss</h3>
+          <p>Rich, smooth Mindanao cacao churned slow. The flavor that won the original bet.</p>
+        </div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-icon">🍓</div>
+        <div>
+          <h3>Strawberry Swirl</h3>
+          <p>Fresh seasonal strawberries folded into cream. Only available while they're good.</p>
+        </div>
+      </div>
+      <div class="flavor-card">
+        <div class="flavor-icon">🌿</div>
+        <div>
+          <h3>Mint Chip</h3>
+          <p>Cool mint with dark chocolate chips. Clara's favorite. Elena still finds it boring.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="values">
-    <div class="values-inner">
-      <h2>What we believe about ice cream</h2>
-      <div class="values-grid">
-        <div class="value-item">
-          <div class="value-icon">🌿</div>
-          <h3>Real ingredients only</h3>
-          <p>No artificial anything. If we can't source it from a farm we've visited, it doesn't go in the batch.</p>
-        </div>
-        <div class="value-item">
-          <div class="value-icon">🕐</div>
-          <h3>Slow churned</h3>
-          <p>We churn at low speed to keep less air in the mix. Denser, richer, and it holds up better in the sun.</p>
-        </div>
-        <div class="value-item">
-          <div class="value-icon">🔁</div>
-          <h3>Seasonal rotation</h3>
-          <p>Our menu changes with what's good right now. You'll find mango in July and blood orange in February.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="dark-band">
+    <h2>The menu changes. The obsession doesn't.</h2>
+    <p>We rotate flavors with the seasons — whatever's in peak form right now goes in the batch. Check back often.</p>
+    <a href="ingredients.html" class="btn-outline">See all flavors</a>
+  </div>
 
-  <section class="team">
-    <h2>The people behind the counter</h2>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar">👨‍🍳</div>
-        <h3>Dowelle Dayle Mon</h3>
-        <p class="role">Co-founder & Head Churner</p>
-        <p>Flavor visionary. Responsible for the lavender honey incident of 2014, which was actually great.</p>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">👨‍🍳</div>
-        <h3>Ronnie Luy</h3>
-        <p class="role">Co-founder & Operations</p>
-        <p>Keeps the whole thing from falling apart. Partial to mint chip, which Elena finds boring.</p>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">👨‍🍳</div>
-        <h3>Justine Dimalanta</h3>
-        <p class="role">Pastry & Cone Lead</p>
-        <p>Bakes every waffle cone fresh each morning. Has won two regional cone-making competitions.</p>
-      </div>
+  <section class="contact" id="contact">
+    <div class="contact-text">
+      <h2>Find us on Elm Street</h2>
+      <p>Open daily, 11am – 9pm.</p>
+      <p>Walk-ins welcome, smiles encouraged.</p>
+      <p style="margin-top: 1rem;"><a href="mailto:hello@scoopsandco.com">hello@scoopsandco.com</a></p>
+      <p><a href="tel:+639001234567">+63 900 123 4567</a></p>
     </div>
+    <div class="contact-visual">🗺️</div>
   </section>
 
   <section class="cta">
     <h2>Come find your flavor</h2>
     <p>Open daily 11am – 9pm. Walk-ins welcome, smiles encouraged.</p>
-    <a href="#" class="btn">See our menu</a>
+    <a href="#flavors" class="btn-white">See our menu</a>
   </section>
 
   <footer>
-    <p>© 2025 Scoops & Co. · 42 Elm Street · hello@scoopsandco.com</p>
+    <p>© 2026 Scoops & Co. · 42 Elm Street · hello@scoopsandco.com</p>
   </footer>
+
+  <!-- CHATBOT -->
+  <button id="chat-toggle" aria-label="Open chat">
+    <svg class="icon-chat" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H6l-2 2V4h16v10z"/>
+    </svg>
+    <svg class="icon-close" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </svg>
+  </button>
+
+  <div id="chat-window" role="dialog" aria-label="Scoops & Co. chat">
+    <div class="chat-header">
+      <div class="chat-header-avatar">🍦</div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">Scoops & Co.</div>
+        <div class="chat-header-sub">Ask about flavors, hours, or our story</div>
+      </div>
+      <div class="chat-online-dot"></div>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-footer">
+      <input
+        type="text"
+        id="chat-input"
+        placeholder="What's your favorite flavor?"
+        autocomplete="off"
+        maxlength="300"
+      />
+      <button id="chat-send">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const SYSTEM = `You are the friendly assistant for Scoops & Co., a family-run artisan ice cream shop. Warm, conversational, never stiff. Keep replies to 2–4 sentences unless more is needed.
+
+ABOUT: Founded 2009 by sisters Elena Reyes (Co-founder & Head Churner) and Clara Reyes (Co-founder & Operations). Started with a secondhand churn and Mindanao cacao. Marco Silva is Pastry & Cone Lead — bakes fresh waffle cones daily, two-time regional cone competition winner.
+
+VALUES: Real ingredients only (no artificial additives, farm-sourced). Slow-churned at low speed for denser texture. Seasonal menu rotation.
+
+HOURS & LOCATION: Open daily 11am–9pm. 42 Elm Street. Email: hello@scoopsandco.com. Phone: +63 900 123 4567. Walk-ins welcome.
+
+FLAVORS: Vanilla Dream (Madagascan beans), Chocolate Bliss / Mindanao Dark Chocolate (the original, won the founding bet), Strawberry Swirl (seasonal), Mint Chip (Clara loves it, Elena finds it boring), Lavender Honey (fan favorite since 2014), Mango (summer seasonal), Blood Orange (winter seasonal). Menu rotates seasonally.
+
+If unsure, invite them to email hello@scoopsandco.com or visit. Never invent details.`;
+
+    const toggle  = document.getElementById('chat-toggle');
+    const win     = document.getElementById('chat-window');
+    const msgs    = document.getElementById('chat-messages');
+    const input   = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('chat-send');
+    const iconChat  = toggle.querySelector('.icon-chat');
+    const iconClose = toggle.querySelector('.icon-close');
+
+    let open = false, busy = false, history = [], greeted = false;
+
+    toggle.addEventListener('click', () => {
+      open = !open;
+      win.classList.toggle('open', open);
+      iconChat.style.display  = open ? 'none'  : 'block';
+      iconClose.style.display = open ? 'block' : 'none';
+      if (open && !greeted) {
+        greeted = true;
+        setTimeout(() => addMsg('bot', 'Hey! 🍦 Looking for your next favorite flavor? Ask me anything about our menu, hours, or the shop!'), 220);
+      }
+      if (open) setTimeout(() => input.focus(), 300);
+    });
+
+    function addMsg(role, text) {
+      const d = document.createElement('div');
+      d.className = `msg ${role}`;
+      d.textContent = text;
+      msgs.appendChild(d);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    function showTyping() {
+      const d = document.createElement('div');
+      d.className = 'typing-bubble';
+      d.id = 'typing';
+      d.innerHTML = '<span></span><span></span><span></span>';
+      msgs.appendChild(d);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    function removeTyping() {
+      const t = document.getElementById('typing');
+      if (t) t.remove();
+    }
+
+    async function send() {
+      const text = input.value.trim();
+      if (!text || busy) return;
+      input.value = '';
+      addMsg('user', text);
+      history.push({ role: 'user', content: text });
+      busy = true;
+      sendBtn.disabled = true;
+      showTyping();
+
+      try {
+        const res  = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: 'claude-sonnet-4-6',
+            max_tokens: 1000,
+            system: SYSTEM,
+            messages: history
+          })
+        });
+        const data  = await res.json();
+        const reply = data.content?.[0]?.text ?? "Something went wrong — try again!";
+        removeTyping();
+        addMsg('bot', reply);
+        history.push({ role: 'assistant', content: reply });
+      } catch {
+        removeTyping();
+        addMsg('bot', 'Oops, something went wrong. Try emailing us at hello@scoopsandco.com!');
+      }
+
+      busy = false;
+      sendBtn.disabled = false;
+      input.focus();
+    }
+
+    sendBtn.addEventListener('click', send);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
+  </script>
 
 </body>
 </html>
